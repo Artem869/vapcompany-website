@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт обновляется | VAPCompanyProduct</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo1.jpeg" type="image/jpeg">
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            background-attachment: fixed;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+            z-index: 10;
+            max-width: 600px;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        .logo-wrapper {
+            margin-bottom: 40px;
+            perspective: 1000px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .logo-circle {
+            width: 100%;
+            height: 100%;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .logo-inner {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .message {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            opacity: 0;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            opacity: 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: white;
+            width: 0%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .status {
+            font-size: 0.9rem;
+            opacity: 0;
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            opacity: 0;
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            transition: border-color 0.3s;
+        }
+
+        .contact-info a:hover {
+            border-bottom-color: white;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .message {
+                font-size: 1rem;
+                padding: 20px;
+            }
+
+            .logo {
+                width: 90px;
+                height: 90px;
+            }
+
+            .logo-inner {
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+        <div class="logo-wrapper">
+            <div class="logo">
+                <div class="logo-circle"></div>
+                <div class="logo-inner">⚡</div>
+            </div>
+        </div>
+
+        <h1>Сайт обновляется</h1>
+
+        <div class="subtitle">Мы работаем над улучшениями</div>
+
+        <div class="message">
+            <p>В данный момент наш сайт находится на техническом обслуживании.</p>
+            <p>Мы внедряем новые функции и улучшаем производительность, чтобы обеспечить вам лучший опыт.</p>
+            <p>Ориентировочно, сайт будет доступен 20-25 декабря.</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <div class="status">Обновление системы...</div>
+
+        <div class="contact-info">
+            По вопросам: <a href="mailto:vapcompany7605@gmail.com">vapcompany7605@gmail.com</a>
+
+        </div>
+    </div>
+
+    <script>
+        // Создание частиц для фона
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particlesContainer.appendChild(particle);
+
+                // Анимация частиц с GSAP
+                gsap.to(particle, {
+                    y: -100 - Math.random() * 200,
+                    x: (Math.random() - 0.5) * 200,
+                    opacity: Math.random() * 0.5 + 0.3,
+                    duration: 3 + Math.random() * 4,
+                    repeat: -1,
+                    ease: "none",
+                    delay: Math.random() * 3
+                });
+            }
+        }
+
+        // Анимация логотипа
+        function animateLogo() {
+            gsap.to('.logo-circle', {
+                rotation: 360,
+                duration: 3,
+                repeat: -1,
+                ease: "none"
+            });
+
+            gsap.to('.logo-inner', {
+                scale: 1.1,
+                duration: 0.8,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+        }
+
+        // Основная анимация появления элементов
+        function animateContent() {
+            const tl = gsap.timeline();
+
+            tl.to('h1', {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power3.out"
+            })
+                .to('.subtitle', {
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power2.out"
+                }, "-=0.5")
+                .to('.message', {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.8,
+                    ease: "back.out(1.2)"
+                }, "-=0.3")
+                .to('.progress-bar', {
+                    opacity: 1,
+                    duration: 0.5
+                }, "-=0.3")
+                .to('.progress-fill', {
+                    width: '100%',
+                    duration: 4,
+                    ease: "power1.inOut",
+                    repeat: -1
+                })
+                .to('.status', {
+                    opacity: 1,
+                    duration: 0.5
+                }, "-=3.5")
+                .to('.contact-info', {
+                    opacity: 1,
+                    duration: 0.8
+                }, "-=3");
+
+            // Мигание статуса
+            gsap.to('.status', {
+                opacity: 0.4,
+                duration: 1.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+        }
+
+        // Инициализация всех анимаций
+        window.addEventListener('load', () => {
+            createParticles();
+            animateLogo();
+            animateContent();
+        });
+    </script>
+</body>
+
+</html>

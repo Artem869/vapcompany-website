@@ -1,0 +1,37 @@
+# robots.txt для VAP Company
+# https://vapcompany.kz/robots.txt
+
+# Разрешаем всем поисковым роботам индексировать сайт
+User-agent: *
+Allow: /
+
+# Запрещаем индексацию технических директорий Next.js
+Disallow: /api/
+Disallow: /_next/
+Disallow: /_next/static/
+Disallow: /_next/image
+
+# Запрещаем индексацию системных файлов
+Disallow: /*.json$
+Disallow: /*.xml$ 
+Disallow: /sitemap.xml
+
+# Разрешаем индексацию важных страниц (явно)
+Allow: /
+Allow: /about
+Allow: /services/
+Allow: /education
+Allow: /portfolio/
+
+# Карта сайта для поисковых систем
+Sitemap: https://vapcompany.kz/sitemap.xml
+
+# Дополнительные правила для конкретных ботов
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Bingbot
+Allow: /
