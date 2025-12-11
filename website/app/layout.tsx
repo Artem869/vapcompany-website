@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 
   // Верификация для поисковиков
   verification: {
-    google: "ваш-код-от-google-search-console",
+    google: "eIsd7_wOz48f0MazxyTgFvIfWOb0kZOHTD2B0nRPzt4",
     yandex: "ваш-код-от-яндекс-вебмастера",
   },
 
