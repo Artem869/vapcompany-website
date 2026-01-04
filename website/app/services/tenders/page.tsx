@@ -28,9 +28,9 @@ const ourProjects = [
     },
     {
         year: '2025',
-        projects: 139,
-        sum: '>20 млн ₸',
-        growth: 'В процессе',
+        projects: 153,
+        sum: '>21 млн ₸',
+        growth: 'Старт',
         color: 'from-green-400 to-green-600'
     }
 ];
