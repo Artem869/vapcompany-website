@@ -40,11 +40,7 @@ const caseStudies = [
             'Гладкие стеклянные (glass) эффекты интерфейса',
             'Автоматическая оптимизация изображений',
             'Полная адаптивность под мобильные устройства'
-        ],
-        testimonial: {
-            text: 'Отличная работа! Сайт получился именно таким, каким мы его задумывали - современным, быстрым и профессиональным.',
-            author: 'Rockstar Track'
-        }
+        ]
     },
     {
         id: 2,
@@ -80,12 +76,7 @@ const caseStudies = [
             'Статистика и аналитика',
             'Динамический каталог продуктов',
             'Модульная архитектура'
-        ],
-        testimonial: {
-            text: 'Супер результат! Новый сайт и CRM полностью изменили работу. Учёт клиентов стал онлайн, без бумажек и хаоса. Всё работает чётко и удобно.',
-            author: 'Bonjour Bakery'
-
-        }
+        ]
     },
     {
         id: 3,
@@ -116,18 +107,45 @@ const caseStudies = [
             'TypeScript для типобезопасности',
             'Интерактивные модальные окна',
             'SEO и метатеги'
+        ]
+    },
+    {
+        id: 4,
+        title: 'Ridera - Авто под выкуп',
+        category: 'Лендинг',
+        year: '2026',
+        duration: '1.5 недели',
+        image: '/photoforweb/ridera/logo.png',
+        imageAlt: 'Кейс Ridera - создание лендинга для сдачи авто в аренду',
+        link: 'https://ridera.kz/',
+        gallery: [
+            '/photoforweb/ridera/one.webp',
+            '/photoforweb/ridera/two.webp',
+            '/photoforweb/ridera/three.webp'
         ],
-        testimonial: {
-            text: 'Профессиональный подход к делу. Сайт получился стильным и функциональным. Все наши требования были учтены и реализованы качественно.',
-            author: 'DVR Company'
-
-        }
+        challenge: 'Клиент: Ridera. Задача: переделать старый сайт на новый, минималистичный. ',
+        solution: 'Разработали минималистичный сайт. Рализовали перевод на Казахский язык. Создали адаптивный дизайн для всех устройств, интегрировали SEO-оптимизацию для лучшей видимости в поисковых системах.',
+        results: [
+            'Современный и минималистичный дизайн',
+            'Полная адаптивность на всех устройствах',
+            'Мультиязычность (Казахский и Русский)',
+            'WebP изображения для быстрой загрузки'
+        ],
+        technologies: ['Next.js 14', 'React 18', 'Tailwind CSS 4', 'TypeScript 5'],
+        features: [
+            'Серверные компоненты Next.js 14',
+            'Плавные анимации',
+            'TypeScript для типобезопасности',
+            'Интерактивные модальные окна',
+            'SEO и метатеги'
+        ]
     }
+
 
 ];
 
 const stats = [
-    { value: '3', label: 'Завершенных проекта' },
+    { value: '4', label: 'Завершенных проекта' },
     { value: '100%', label: 'Довольных клиентов' },
     { value: '2 нед', label: 'Средний срок' },
     { value: 'Чистый код', label: 'Никаких конструкторов' }
@@ -488,26 +506,6 @@ export default function WebPortfolioPage() {
                                             ))}
                                         </ul>
                                     </div>
-
-                                    {/* Testimonial */}
-                                    {selectedCase.testimonial && (
-                                        <div className="p-6 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-xl border border-green-200 dark:border-green-800">
-                                            <p className="text-gray-700 dark:text-gray-300 italic mb-4">
-                                                "{selectedCase.testimonial.text}"
-                                            </p>
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                                                    {selectedCase.testimonial.author.charAt(0)}
-                                                </div>
-                                                <div>
-                                                    <p className="font-semibold text-gray-900 dark:text-white">
-                                                        {selectedCase.testimonial.author}
-                                                    </p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
                                 </div>
                             </div>
                         </motion.div>
